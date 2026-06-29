@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'mainlogin.css'%}">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="left">
+    <img src="{% static 'student2.jpg' %}" style="width: 300%; background-size: cover;" />
+  </div>
+  <div class="right">
+    <h2>LOGIN</h2>
+
+    <p>Welcome ! Login to begin.</p>
+
+    <form action="loginrecord/" method="post">
+      {% csrf_token %}
+    	NAME:
+    	<div class="input-box">
+    		<input type="text" name="name" placeholder="Name" />
+    	</div>
+        PASSWORD:
+    	<div class="input-box">
+    		<input type="password" name="password" placeholder="Password" />
+    	</div>
+
+
+        <button type="submit">SUBMIT</button>
+    </form>
+   </div>
+
+</div>
+
+</body>
+</html>
+

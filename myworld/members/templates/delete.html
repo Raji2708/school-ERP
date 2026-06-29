@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'newlogin.css' %}">
+	<title></title>
+</head>
+<body>
+  <center>
+	<h1 class="page-title">DELETE</h1>
+	<div class="login-box">
+		<form action="deletex/" method="post">
+			<span class="close">×</span>
+			{% csrf_token %}
+			ID:
+			<input name="id" placeholder="ID">
+			<br><br>
+			NAME:
+			<input name="name" placeholder="Name">
+			<br><br>
+			<input type="submit" value="Submit" class="bttn">
+		</form>
+	</div>
+  </center>
+
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'student.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css'%}">
+<script type="text/javascript" src="{% static 'jquery.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'bootstrap.min.js'%}"></script>
+
+<div class="row card-box">
+    <div class="col-md-6 text-center">
+        <img src="{% static 'bts8.jpg' %}" width="70%">
+    </div>
+    <div class="col-md-6">
+        {% for x in student %}
+        <h1>NAME : {{ x.name }}</h1>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="info-box">
+            {% for x in student %}
+            <h1>MARK %<br>{{ x.percent }}</h1>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="info-box">
+            {% for x in student %}
+            <h1>TOTAL FEE<br>{{ x.fee }}</h1>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="info-box">
+            {% for x in student %}
+            <h1>BALANCE FEE<br>{{ x.balance }}</h1>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<center>
+    <div class="row circular-box">
+        <h1>CIRCULAR</h1>
+        <h4>
+            {% for y in inform %}
+            <p>{{ y.circular }}</p>
+            {% endfor %}
+        </h4>
+    </div>
+
+    <div class="row">
+        <a href="assign/">MESSAGE</a>
+    </div>
+</center>
+
+

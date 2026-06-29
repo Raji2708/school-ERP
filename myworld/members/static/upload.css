@@ -1,0 +1,74 @@
+/* Page Background – Beige */
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #d9d9d9;   /* Beige */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Blue Form Card */
+.upload-container {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 30px 40px;
+    width: 380px;
+    border-radius: 14px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Heading */
+.upload-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Form Labels */
+.upload-container label {
+    color: #e6ecff;
+    font-weight: 500;
+}
+
+/* Input Fields */
+.upload-container input[type="file"],
+.upload-container input[type="text"],
+.upload-container input[type="email"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: #ffffff;
+}
+
+/* Focus Effect */
+.upload-container input:focus {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Upload Button */
+.upload-container button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    background: #ffffff;
+    color: #1e3c72;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+.upload-container button:hover {
+    background: #e6ecff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4);
+}

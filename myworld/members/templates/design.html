@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Page UI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 900px;
+      height: 520px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      display: flex;
+      overflow: hidden;
+    }
+
+    /* LEFT IMAGE PANEL */
+    .left {
+      flex: 1;
+      background: linear-gradient(180deg, #9dbcf5, #7fa3eb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .left img {
+      width: 100%;
+      max-width: 320px;
+    }
+
+    /* RIGHT LOGIN PANEL */
+    .right {
+      flex: 1;
+      padding: 50px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #555;
+    }
+
+    .nav .signup {
+      background: #7fa3eb;
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    h2 {
+      color: #3a5bdc;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    .input-box {
+      margin-bottom: 20px;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #d0d9f5;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    .options a {
+      text-decoration: none;
+      color: #3a5bdc;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #7fa3eb;
+      border: none;
+      color: #fff;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .footer-text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+    }
+
+    .footer-text a {
+      color: #3a5bdc;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="left">
+    <!-- Replace image src with your illustration -->
+    <img src="design7.jpg" alt="illustration" />
+  </div>
+
+  <div class="right">
+    <div class="nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#" class="signup">Sign Up</a>
+    </div>
+
+    <h2>LOGIN</h2>
+    <p>Welcome back! Login to begin.</p>
+
+    <div class="input-box">
+      <input type="email" placeholder="Email" />
+    </div>
+
+    <div class="input-box">
+      <input type="password" placeholder="Password" />
+    </div>
+
+    <div class="options">
+      <label><input type="checkbox" /> Remember me</label>
+      <a href="#">Forgot Password?</a>
+    </div>
+
+    <button>LOG IN</button>
+
+    <div class="footer-text">
+      Don't have an account? <a href="#">Create an account</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

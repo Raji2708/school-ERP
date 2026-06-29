@@ -1,0 +1,86 @@
+/* Page Background */
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #d9d9d9; /* Beige */
+}
+
+/* Gallery Title */
+.gallery-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    color: #5a4633;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.gallery-title::after {
+    content: "";
+    width: 120px;
+    height: 4px;
+    background: #d9d9d9;   /* Beige Accent */
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 4px;
+}
+
+/* Gallery Layout */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 25px;
+}
+
+/* Gallery Card */
+.gallery-card {
+    background:linear-gradient(135deg, #1e3c72, #2a5298); /* Blue Card */
+    padding: 22px;
+    border-radius: 18px;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+/* Card Hover */
+.gallery-card:hover {
+    transform: translateY(-6px);
+}
+
+/* Card Text */
+.gallery-card p {
+    color: #f7f2ea;
+    margin-bottom: 6px;
+}
+.gallery-card h3 {
+    color: #f7f2ea;
+    margin-bottom: 6px;
+}
+
+.gallery-card h4 {
+    color: #c7d4ff;
+    margin-bottom: 15px;
+}
+
+/* Image Row */
+.image-row {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Images */
+.image-row img {
+    width: 140px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #f4e1b1;
+    transition: 0.3s;
+}
+
+/* Image Hover */
+.image-row img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(244, 225, 177, 0.6);
+}

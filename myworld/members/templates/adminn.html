@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'newlogin.css' %}">
+	<title></title>
+</head>
+<body>
+  <center>
+	<h1 class="page-title">REGISTRATON FORM</h1>
+	<div class="login-box">
+		<form action="addrecord/" method="post">
+			{% csrf_token %}
+			Student Name:<input name="name" placeholder="Name">
+			<br>
+			ID:<input name="ids" placeholder="ID">
+			<br>
+			Age:<input name="age" placeholder="Age">
+			<br>
+			Class:<input name="classs" placeholder="Class">
+			<br>
+			Fee:<input name="fee" placeholder="Fee">
+			<br>
+			Balance:<input name="balance" placeholder="Balance fee"> 
+			<br>
+			Percentage:<input name="percent" placeholder="Mark Percentage">
+			<br>
+			<input type="submit" value="Submit" class="bttn">
+		</form>
+	</div>
+  </center>
+
+</body>
+</html>
+
+

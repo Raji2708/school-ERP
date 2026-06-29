@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'newlogin.css' %}">
+	<title></title>
+</head>
+<body>
+	<center>
+		<h1 class="page-title">ADD ADMIN</h1>
+		<div class="login-box">
+		<div class="collo">
+			<form action="addadmin/" method="post">
+				<span class="close">×</span>
+				{% csrf_token %}
+				<span style="color: white;">NAME:</span>
+				<input name="name" placeholder="Name">
+				<br><br>
+				<span style="color: white;">PASSWORD:</span>
+				<input name="password" placeholder="Password">
+				<br><br>
+				<span style="color: white;">DESIGNATIOM:</span>
+				<input name="designation" placeholder="Designation">
+				<br><br>
+				<input type="submit" value="Submit" class="bttn">
+			</form>
+		</div>
+	</div>
+	</center>
+
+</body>
+</html>
+

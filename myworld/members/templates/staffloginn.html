@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'tables.css' %}">
+	<title></title>
+</head>
+<body>
+
+
+<center>
+	
+		{% for x in person %}
+		<h1 class="page-title">WELCOME {{ x.name }}</h1>
+		{% endfor %}
+	
+	<table border="1" class="zigzag-table">
+		<thead>
+		<tr>
+			<td>S.NO</td>
+			<td>NAME</td>
+			<td>ID</td>
+			<td>AGE</td>
+			<td>CLASS</td>
+			<td>FEE</td>
+			<td>BALANCE</td>
+			<td>PERCENT</td>
+		</tr>
+	    </thead>
+		{% for x in alloc %}
+		<tr>
+			<td>{{ x.id }}</td>
+			<td>{{ x.name }}</td>
+			<td>{{ x.ids }}</td>
+			<td>{{ x.age }}</td>
+			<td>{{ x.classs }}</td>
+			<td>{{ x.fee }}</td>
+			<td>{{ x.balance }}</td>
+			<td>{{ x.percent }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	<table border="1" class="zigzag-table">
+		{% for y in assign %}
+		<thead>
+		<tr>
+			<th>MESSAGE FROM {{y.name}}</th>
+		</tr>
+		</thead>
+		<tr>
+			<td>{{ y.assignment }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</center>
+
+</body>
+</html>

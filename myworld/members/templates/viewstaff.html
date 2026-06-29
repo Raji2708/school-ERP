@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'tables.css' %}">
+	<title></title>
+	<style>
+		body {
+  margin: 0;
+  padding: 40px;
+  font-family: "Segoe UI", sans-serif;
+  background: #d9d9d9;
+}
+
+/* Stylish Heading */
+.page-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 30px;
+  color: #5a4633;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Decorative line under H1 */
+.page-title::after {
+  content: "";
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #8b6f47, #d2b48c);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+	.zigzag-table {
+  width: 80%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  font-family: "Segoe UI", sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.zigzag-table thead {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+}
+
+.zigzag-table th,
+.zigzag-table td {
+  padding: 12px 16px;
+  text-align: center;
+  border: 1px solid #cbd5f5;
+}
+
+/* Zig-zag rows */
+.zigzag-table tbody tr:nth-child(odd) {
+  background-color: #e3f2fd;
+}
+
+.zigzag-table tbody tr:nth-child(even) {
+  background-color: #bbdefb;
+}
+
+/* Hover effect */
+.zigzag-table tbody tr:hover {
+  background-color: #90caf9;
+  transition: 0.3s;
+}
+.table-btn {
+  padding: 6px 12px;
+  background: #2a5298;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.table-btn:hover {
+  background: #1e3c72;
+}
+</style>
+</head>
+<body>
+
+
+<center>
+<h1 class="page-title">STAFF DETAILS</h1>
+
+<table border="1" class="zigzag-table">
+	<thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Password</th>
+        <th>Designation</th>
+      </tr>
+    </thead>
+{% for x in staff %}
+<tr>
+<td>{{ x.id }}</td>
+<td>{{ x.name }}</td>
+<td>{{ x.password }}</td>
+<td>{{ x.designation }}</td>
+</tr>
+{% endfor %}
+</table>
+</center>
+
+</body>
+</html>
+
